@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyoto — Website Showcase</title>
+    <meta name="description" content="Lihat preview desain Kyoto dan konsultasikan kebutuhan penyesuaian website Anda.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kyoto — Website Showcase">
+    <meta property="og:description" content="Preview desain Kyoto dalam kategori Organisasi. Konsultasikan kebutuhan Anda sekarang.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../assets/previews/Kyoto.png">
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>🌐</span>
+                <span>Website Showcase</span>
+            </div>
+            <nav>
+                <a href="../index.html">Beranda</a>
+                <a href="../index.html#katalog">Katalog</a>
+                <a href="#tentang">Tentang Kami</a>
+                <a href="#kontak">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="../index.html">Beranda</a>
+        <span>/</span>
+        <a href="../index.html#katalog">Katalog</a>
+        <span>/</span>
+        <span>Kyoto</span>
+    </div>
+
+    <!-- Detail Hero -->
+    <section class="detail-hero">
+        <div class="detail-header">
+            <h1 class="detail-title">Kyoto</h1>
+            <div class="detail-meta">
+                <span><strong>Website #40</strong></span>
+                <span>Kategori: <strong>Organisasi</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Description -->
+        <div class="detail-content">
+            <p class="detail-description">
+                Organisasi pariwisata budaya
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div class="detail-image">
+            <img 
+                src="../assets/previews/Kyoto.png" 
+                alt="Preview Kyoto"
+                loading="lazy"
+                decoding="async"
+                onerror="this.style.background='#f0f0f0'; this.alt='Gambar tidak tersedia';"
+            >
+        </div>
+
+        <!-- CTA Section -->
+        <div class="detail-content">
+            <div class="cta-section">
+                <h3>Tertarik dengan Desain Ini?</h3>
+                <p>Konsultasikan kebutuhan website Anda dan dapatkan penawaran terbaik.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="consultWebsite('Kyoto')">
+                        Konsultasikan dengan Kami
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="detail-content">
+            <div class="nav-adjacent">
+                <a href="website-39.html" class="btn btn-secondary">← Website Sebelumnya (Kualalumpur)</a>
+                <a href="website-41.html" class="btn btn-secondary">Website Berikutnya (Lasvegas) →</a>
+            </div>
+
+            <div class="navigation">
+                <a href="../index.html#katalog" class="btn btn-primary">Kembali ke Katalog</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Website Showcase</h4>
+                    <p>Katalog desain website profesional untuk inspirasi proyek Anda.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../index.html#katalog">Katalog</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="javascript:consultWebsite('Kyoto')">Konsultasi Gratis</a></li>
+                        <li><a href="javascript:openGeneralWhatsAppConsultation()">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Website Showcase. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Convenience function for this page
+        function consultWebsite(websiteName) {
+            openWhatsAppConsultation(websiteName);
+        }
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' && true) {
+                window.location.href = 'website-39.html';
+            }
+            if (e.key === 'ArrowRight' && true) {
+                window.location.href = 'website-41.html';
+            }
+        });
+    </script>
+</body>
+</html>
