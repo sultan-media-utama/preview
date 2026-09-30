@@ -1,4 +1,4 @@
-# Website Showcase — Katalog Desain Website
+# Lectore — Katalog Desain Website
 
 Katalog interaktif yang menampilkan 95 desain website profesional dalam format PNG. Website ini dirancang untuk membantu calon klien melihat berbagai referensi desain dan berkonsultasi mengenai kebutuhan website mereka.
 
@@ -72,7 +72,7 @@ Edit `script.js` dan ubah nomor WhatsApp di bagian `siteConfig`:
 
 ```javascript
 const siteConfig = {
-    brandName: "Website Showcase",
+    brandName: "Lectore",
     whatsappNumber: "628123456789", // Ganti dengan nomor bisnis Anda
     consultationLabel: "Konsultasikan dengan Kami"
 };

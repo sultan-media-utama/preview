@@ -129,11 +129,11 @@ function generateDetailPageHTML(website) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${website.name} — Website Showcase</title>
+    <title>${website.name} — Lectore</title>
     <meta name="description" content="Lihat preview desain ${website.name} dan konsultasikan kebutuhan penyesuaian website Anda.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="${website.name} — Website Showcase">
+    <meta property="og:title" content="${website.name} — Lectore">
     <meta property="og:description" content="Preview desain ${website.name} dalam kategori ${website.category}. Konsultasikan kebutuhan Anda sekarang.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="${imagePath}">
@@ -146,7 +146,7 @@ function generateDetailPageHTML(website) {
         <div class="header-container">
             <div class="logo">
                 <span>🌐</span>
-                <span>Website Showcase</span>
+                <span>Lectore</span>
             </div>
             <nav>
                 <a href="../index.html">Beranda</a>
@@ -228,7 +228,7 @@ function generateDetailPageHTML(website) {
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Website Showcase</h4>
+                    <h4>Lectore</h4>
                     <p>Katalog desain website profesional untuk inspirasi proyek Anda.</p>
                 </div>
                 <div class="footer-section">
@@ -249,7 +249,7 @@ function generateDetailPageHTML(website) {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Website Showcase. Semua hak dilindungi.</p>
+                <p>&copy; 2024 Lectore. Semua hak dilindungi.</p>
             </div>
         </div>
     </footer>
