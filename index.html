@@ -6,7 +6,6 @@
     <title>Lectore - Katalog Desain Website</title>
     <meta name="description" content="Jelajahi 95 desain website profesional dan konsultasikan kebutuhan website Anda bersama kami.">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Lectore - Katalog Desain Website">
     <meta property="og:description" content="Temukan inspirasi dari koleksi desain website kami dan mulai konsultasi kebutuhan Anda.">
     <meta property="og:type" content="website">
@@ -19,30 +18,29 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <span>🌐</span>
-                <span>Lectore</span>
+                <span>Lectore.</span>
             </div>
             <nav>
                 <a href="#home">Beranda</a>
                 <a href="#katalog">Katalog</a>
-                <a href="#tentang">Tentang Kami</a>
+                <a href="#tentang">Tentang</a>
                 <a href="#kontak">Kontak</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Asymmetric) -->
     <section class="hero" id="home">
         <div class="hero-container">
-            <h1>Temukan Desain Website yang Sesuai dengan Kebutuhan Anda</h1>
-            <p>Jelajahi koleksi desain website kami dan temukan referensi yang sesuai untuk bisnis, organisasi, pendidikan, maupun kebutuhan personal Anda.</p>
-            <div class="hero-stats" id="websiteStats"></div>
+            <div class="hero-stats" id="websiteStats">0 Inspirasi Website</div>
+            <h1>Desain Web yang <br>Mendefinisikan Brand Anda.</h1>
+            <p>Tinggalkan desain template yang membosankan. Jelajahi koleksi desain website premium kami yang dirancang khusus untuk bisnis, organisasi, portofolio, dan e-commerce modern.</p>
             <div class="hero-buttons">
-                <button class="btn btn-secondary" onclick="document.getElementById('katalog').scrollIntoView({behavior: 'smooth'})">
-                    Jelajahi Katalog
-                </button>
                 <button class="btn btn-primary" onclick="openGeneralWhatsAppConsultation()">
-                    Konsultasikan Kebutuhan Anda
+                    Mulai Konsultasi
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('katalog').scrollIntoView({behavior: 'smooth'})">
+                    Lihat Koleksi
                 </button>
             </div>
         </div>
@@ -52,7 +50,7 @@
     <section class="filters-section" id="katalog">
         <div class="filters-container">
             <div class="filter-group">
-                <label for="searchInput">Cari Website</label>
+                <label for="searchInput">Pencarian</label>
                 <input 
                     type="text" 
                     id="searchInput" 
@@ -62,43 +60,40 @@
             </div>
             
             <div class="filter-group">
-                <label for="categoryFilter">Filter Kategori</label>
+                <label for="categoryFilter">Kategori</label>
                 <select id="categoryFilter" aria-label="Filter berdasarkan kategori">
                     <option value="">Semua Kategori</option>
                 </select>
             </div>
             
             <div class="filter-group">
-                <label for="sortFilter">Urutkan Berdasarkan</label>
+                <label for="sortFilter">Urutkan</label>
                 <select id="sortFilter" aria-label="Urutkan website">
-                    <option value="id-asc">Nomor (Terkecil)</option>
-                    <option value="id-desc">Nomor (Terbesar)</option>
+                    <option value="id-asc">Nomor (Awal)</option>
+                    <option value="id-desc">Nomor (Akhir)</option>
                     <option value="name-asc">Nama (A-Z)</option>
                     <option value="name-desc">Nama (Z-A)</option>
                 </select>
             </div>
-        </div>
 
-        <div class="filter-buttons">
-            <button class="btn btn-primary" onclick="applyFilters()">Terapkan Filter</button>
-            <button class="btn btn-secondary" onclick="resetFilters()">Reset</button>
+            <div class="filter-buttons">
+                <button class="btn btn-secondary" onclick="resetFilters()">Reset</button>
+            </div>
         </div>
-
         <div class="filter-results" id="filterResults"></div>
     </section>
 
-    <!-- Main Content -->
+    <!-- Main Content (Masonry / Bento Grid) -->
     <main>
-        <section class="content-section">
-            <div class="grid grid-3" id="websiteGrid">
-                <!-- Cards will be generated here by JavaScript -->
-            </div>
-            <div class="empty-state" id="emptyState" style="display: none;">
-                <h3>Tidak ada website yang ditemukan</h3>
-                <p>Coba ubah kriteria pencarian atau filter Anda.</p>
-                <button class="btn btn-primary" onclick="resetFilters()">Reset Filter</button>
-            </div>
-        </section>
+        <div class="grid" id="websiteGrid">
+            <!-- Cards will be generated here by JavaScript -->
+        </div>
+        
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <h3>Tidak Ditemukan</h3>
+            <p>Tidak ada desain yang sesuai dengan kriteria pencarian Anda saat ini.</p>
+            <button class="btn btn-secondary" onclick="resetFilters()">Reset Filter</button>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -106,28 +101,31 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Lectore</h4>
-                    <p>Katalog desain website profesional untuk inspirasi proyek Anda.</p>
+                    <h4>Lectore.</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.6; max-width: 250px;">
+                        Katalog desain website profesional yang dirancang untuk memperkuat identitas digital Anda.
+                    </p>
                 </div>
                 <div class="footer-section">
                     <h4>Navigasi</h4>
                     <ul>
                         <li><a href="#home">Beranda</a></li>
-                        <li><a href="#katalog">Katalog</a></li>
-                        <li><a href="#tentang">Tentang Kami</a></li>
-                        <li><a href="#kontak">Kontak</a></li>
+                        <li><a href="#katalog">Katalog Koleksi</a></li>
+                        <li><a href="#tentang">Tentang Agensi</a></li>
+                        <li><a href="#kontak">Hubungi Kami</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Layanan</h4>
+                    <h4>Legal</h4>
                     <ul>
-                        <li><a href="javascript:openGeneralWhatsAppConsultation()">Konsultasi Gratis</a></li>
-                        <li><a href="javascript:openGeneralWhatsAppConsultation()">Hubungi Kami</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Lectore. Semua hak dilindungi.</p>
+                <p>&copy; 2026 Lectore. All rights reserved.</p>
+                <p>Designed with High-Agency Standards.</p>
             </div>
         </div>
     </footer>
@@ -180,7 +178,7 @@
         function updateWebsiteStats() {
             const stats = document.getElementById('websiteStats');
             const count = websites.length;
-            stats.textContent = `${count} Inspirasi Website`;
+            stats.textContent = `${count} Desain Premium Tersedia`;
         }
 
         // Populate category dropdown
@@ -216,16 +214,11 @@
             // Sort
             filtered.sort((a, b) => {
                 switch(currentFilters.sort) {
-                    case 'id-asc':
-                        return a.id - b.id;
-                    case 'id-desc':
-                        return b.id - a.id;
-                    case 'name-asc':
-                        return a.name.localeCompare(b.name);
-                    case 'name-desc':
-                        return b.name.localeCompare(a.name);
-                    default:
-                        return a.id - b.id;
+                    case 'id-asc': return a.id - b.id;
+                    case 'id-desc': return b.id - a.id;
+                    case 'name-asc': return a.name.localeCompare(b.name);
+                    case 'name-desc': return b.name.localeCompare(a.name);
+                    default: return a.id - b.id;
                 }
             });
 
@@ -247,9 +240,9 @@
         function updateFilterResults(filtered) {
             const resultText = document.getElementById('filterResults');
             if (filtered.length === websites.length) {
-                resultText.textContent = `Menampilkan semua ${websites.length} website`;
+                resultText.textContent = `Menampilkan semua ${websites.length} karya.`;
             } else {
-                resultText.textContent = `Menampilkan ${filtered.length} dari ${websites.length} website`;
+                resultText.textContent = `Menemukan ${filtered.length} karya yang relevan.`;
             }
         }
 
@@ -268,10 +261,10 @@
             emptyState.style.display = 'none';
             grid.innerHTML = websitesToRender.map(website => createWebsiteCard(website)).join('');
 
-            // Add animation
+            // Apply staggered entrance animations via delay
             const cards = grid.querySelectorAll('.card');
             cards.forEach((card, index) => {
-                card.style.animation = `slideUp 0.4s ease ${index * 0.05}s both`;
+                card.style.animationDelay = `${(index % 12) * 0.05}s`;
             });
         }
 
@@ -287,17 +280,17 @@
                             alt="Preview ${website.name}"
                             loading="lazy"
                             decoding="async"
-                            onerror="this.style.background='#f0f0f0'; this.style.color='#999'; this.alt='Gambar tidak tersedia';"
+                            onerror="this.style.background='#f4f4f5'; this.style.color='#a1a1aa'; this.alt='Gambar tidak tersedia';"
                         >
                     </div>
                     <div class="card-body">
-                        <div class="card-number">Website #${numberFormatted}</div>
+                        <div class="card-number">DSGN-${numberFormatted}</div>
                         <h3 class="card-title">${website.name}</h3>
                         <span class="card-category">${website.category}</span>
                         <p class="card-description">${website.description}</p>
                         <div class="card-action">
-                            <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); goToDetail(${website.id})">
-                                Lihat Detail
+                            <button class="btn" onclick="event.stopPropagation(); goToDetail(${website.id})">
+                                Eksplorasi Detail
                             </button>
                         </div>
                     </div>
