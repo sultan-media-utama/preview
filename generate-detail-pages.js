@@ -106,6 +106,10 @@ const websites = [
     { id: 94, name: "Sassari", category: "Organisasi", description: "Organisasi pengembangan komunitas" }
 ];
 
+// Sort websites alphabetically by name (case-insensitive) and reassign sequential ids
+websites.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+websites.forEach((w, i) => { w.id = i + 1; });
+
 // Utility function
 function getPreviousWebsite(currentId) {
     return websites.find(w => w.id === currentId - 1);

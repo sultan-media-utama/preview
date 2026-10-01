@@ -5,7 +5,7 @@ const siteConfig = {
     consultationLabel: "Konsultasikan dengan Kami"
 };
 
-// Data katalog website - 95 website
+// Data katalog website - 94 website (sinkron dengan generate-detail-pages.js)
 const websites = [
     { id: 1, name: "Abudhabi", category: "Bisnis", description: "Desain modern untuk bisnis internasional" },
     { id: 2, name: "Alabama", category: "Pendidikan", description: "Sekolah Online dengan pendekatan pembelajaran interaktif" },
@@ -95,17 +95,20 @@ const websites = [
     { id: 86, name: "Wuhan", category: "Kesehatan", description: "Rumah sakit" },
     { id: 87, name: "Yerusalem", category: "Bisnis", description: "Kerajinan tangan" },
     { id: 88, name: "Zurich", category: "Kesehatan", description: "Rumah sakit" },
-    { id: 89, name: "Gamagori", category: "Pendidikan", description: "Platform pembelajaran interaktif" },
-    { id: 90, name: "Inuyama", category: "E-commerce", description: "Toko souvenirs dan cenderamata" },
-    { id: 91, name: "Monza", category: "Bisnis", description: "Website klub olahraga" },
-    { id: 92, name: "Nishio", category: "Blog", description: "Blog otomotif dan review mobil" },
-    { id: 93, name: "Salerno", category: "Portofolio", description: "Portfolio ilustrasi digital" },
-    { id: 94, name: "Sassari", category: "Organisasi", description: "Organisasi pengembangan komunitas" }
+    { id: 89, name: "Gamagori", category: "Otomotif", description: "Dealer mobil" },
+    { id: 90, name: "Inuyama", category: "Blog", description: "Blog tentang yoga" },
+    { id: 91, name: "Monza", category: "Bisnis", description: "Website agensi bisnis" },
+    { id: 92, name: "Nishio", category: "Bisnis", description: "Interior Design" },
+    { id: 93, name: "Salerno", category: "Bisnis", description: "Pesan pijat secara online" },
+    { id: 94, name: "Sassari", category: "F&B", description: "Makanan dan minuman" }
 ];
 
-// Tambahkan path gambar ke setiap website
-websites.forEach((website, index) => {
-    const fileName = website.name.toLowerCase();
+// Sort websites alphabetically by name (case-insensitive) and reassign sequential ids
+websites.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+websites.forEach((w, i) => { w.id = i + 1; });
+
+// Tambahkan path gambar ke setiap website (gunakan capitalization yang sama seperti file di /assets/previews)
+websites.forEach((website) => {
     const capitalizedName = website.name.charAt(0).toUpperCase() + website.name.slice(1);
     website.image = `assets/previews/${capitalizedName}.png`;
     website.detailPage = `pages/website-${String(website.id).padStart(2, '0')}.html`;
