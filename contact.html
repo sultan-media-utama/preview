@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak — Lectore</title>
+    <meta name="description" content="Hubungi Lectore untuk konsultasi pembuatan website">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Lectore.</div>
+            <nav>
+                <a href="index.html">Beranda</a>
+                <a href="index.html#katalog">Katalog</a>
+                <a href="about.html">Tentang</a>
+                <a href="contact.html">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="detail-hero">
+            <div class="detail-header">
+                <h1 class="detail-title">Hubungi Kami</h1>
+                <div class="detail-meta">
+                    <span>Konsultasi & Permintaan Penawaran</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="detail-content">
+            <p class="detail-description">Silakan isi formulir atau hubungi kami melalui WhatsApp untuk konsultasi cepat.</p>
+
+            <form id="contactForm" style="max-width:700px; margin-top:1rem;">
+                <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                    <input type="text" id="name" placeholder="Nama Anda" style="flex:1; padding:1rem; border-radius:12px; border:1px solid var(--border-light);">
+                    <input type="email" id="email" placeholder="Email" style="flex:1; padding:1rem; border-radius:12px; border:1px solid var(--border-light);">
+                </div>
+                <textarea id="message" placeholder="Pesan Anda" rows="6" style="width:100%; margin-top:1rem; padding:1rem; border-radius:12px; border:1px solid var(--border-light);"></textarea>
+                <div style="margin-top:1rem; display:flex; gap:1rem;">
+                    <button type="button" class="btn btn-primary" onclick="sendContact()">Kirim Pesan</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href='https://wa.me/6285143665477'">Konsultasi via WhatsApp</button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lectore.</h4>
+                    <p style="color: var(--text-secondary); line-height: 1.6; max-width: 250px;">
+                        Katalog desain website profesional yang dirancang untuk memperkuat identitas digital Anda.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.html#katalog">Katalog Koleksi</a></li>
+                        <li><a href="about.html">Tentang Agensi</a></li>
+                        <li><a href="contact.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lectore. All rights reserved.</p>
+                <p>Designed with High-Agency Standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function sendContact() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (!name || !email || !message) {
+                alert('Isi semua bidang terlebih dahulu.');
+                return;
+            }
+            const text = `Nama: ${name}%0AEmail: ${email}%0APesan: ${message}`;
+            window.open(`https://wa.me/6285143665477?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
