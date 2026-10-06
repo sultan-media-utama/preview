@@ -10,18 +10,22 @@
     <meta property="og:description" content="Temukan inspirasi dari koleksi desain website kami dan mulai konsultasi kebutuhan Anda.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
+    <meta name="theme-color" content="#0f172a">
     
+    <link rel="icon" type="image/png" href="assets/logo-transparent.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
-            <div class="logo">
-                <span>Lectore.</span>
-            </div>
+            <a href="index.html" class="logo-link" aria-label="Kembali ke halaman utama">
+                <div class="logo" aria-label="Lectore logo">
+                    <img src="assets/logo-transparent.png" alt="Lectore" class="brand-mark">
+                    <span>Lectore</span>
+                </div>
+            </a>
             <nav>
-                <a href="#home">Beranda</a>
                 <a href="#katalog">Katalog</a>
                 <a href="about.html">Tentang</a>
                 <a href="contact.html">Kontak</a>
@@ -104,7 +108,7 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Lectore.</h4>
+                    <h4>Lectore</h4>
                     <p style="color: var(--text-secondary); line-height: 1.6; max-width: 250px;">
                         Katalog desain website profesional yang dirancang untuk memperkuat identitas digital Anda.
                     </p>
@@ -127,7 +131,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Lectore. All rights reserved.</p>
+                <p>&copy; 2026 Lectore All rights reserved.</p>
                 <p>Designed with High-Agency Standards.</p>
             </div>
         </div>
@@ -292,8 +296,11 @@
                         <span class="card-category">${website.category}</span>
                         <p class="card-description">${website.description}</p>
                         <div class="card-action">
+                            <button class="btn btn-secondary" onclick="event.stopPropagation(); openWhatsAppConsultation('${website.name}')">
+                                Pesan
+                            </button>
                             <button class="btn" onclick="event.stopPropagation(); goToDetail(${website.id})">
-                                Eksplorasi Detail
+                                Detail
                             </button>
                         </div>
                     </div>

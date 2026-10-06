@@ -1,0 +1,20 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lectoreStroke" x1="36" y1="28" x2="212" y2="228" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FBBF24"/>
+      <stop offset="0.35" stop-color="#F97316"/>
+      <stop offset="0.78" stop-color="#EF4444"/>
+      <stop offset="1" stop-color="#F43F5E"/>
+    </linearGradient>
+  </defs>
+
+  <g stroke="url(#lectoreStroke)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 18L202 58L223 123L186 199L128 238L70 199L33 123L54 58L128 18Z" fill="none"/>
+    <path d="M128 18L94 87L54 58L70 199L128 238L186 199L202 58L162 87L128 18Z" fill="none"/>
+    <path d="M128 18L128 238"/>
+    <path d="M54 58L128 118L202 58"/>
+    <path d="M70 199L128 118L186 199"/>
+    <path d="M54 58L186 199"/>
+    <path d="M202 58L70 199"/>
+  </g>
+</svg>
