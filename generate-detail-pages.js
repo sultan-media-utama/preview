@@ -119,11 +119,35 @@ function getNextWebsite(currentId) {
     return websites.find(w => w.id === currentId + 1);
 }
 
+function getWebsitePrice(category) {
+    const categoryPriceMap = {
+        Bisnis: 300000,
+        Pendidikan: 300000,
+        Blog: 300000,
+        Portofolio: 300000,
+        Creative: 400000,
+        'F&B': 400000,
+        Cafe: 400000,
+        Travel: 400000,
+        Kesehatan: 500000,
+        'E-commerce': 500000,
+        Fashion: 500000,
+        Otomotif: 500000,
+        Farm: 500000,
+        Fundraising: 500000,
+        Organisasi: 500000,
+        'Konsultasi': 500000
+    };
+
+    return categoryPriceMap[category] ?? 400000;
+}
+
 // Generate detail page HTML
 function generateDetailPageHTML(website) {
     const prev = getPreviousWebsite(website.id);
     const next = getNextWebsite(website.id);
     const numberFormatted = String(website.id).padStart(2, '0');
+    const formattedPrice = `Rp ${getWebsitePrice(website.category).toLocaleString('id-ID')}`;
 
     // Image path (relative from pages folder)
     const imagePath = `../assets/previews/${website.name}.png`;
@@ -180,6 +204,7 @@ function generateDetailPageHTML(website) {
             <div class="detail-meta">
                 <span><strong>Website #${numberFormatted}</strong></span>
                 <span>Kategori: <strong>${website.category}</strong></span>
+                <span>Harga: <strong>${formattedPrice}</strong></span>
             </div>
         </div>
     </section>

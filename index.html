@@ -253,6 +253,14 @@
             }
         }
 
+        function formatPrice(value) {
+            const numericValue = Number(value);
+            if (!Number.isFinite(numericValue)) {
+                return '300.000';
+            }
+            return numericValue.toLocaleString('id-ID');
+        }
+
         // Render websites as cards
         function renderWebsites(websitesToRender) {
             const grid = document.getElementById('websiteGrid');
@@ -294,6 +302,7 @@
                         <div class="card-number">DSGN-${numberFormatted}</div>
                         <h3 class="card-title">${website.name}</h3>
                         <span class="card-category">${website.category}</span>
+                        <div class="card-price">Mulai dari Rp ${formatPrice(website.price)}</div>
                         <p class="card-description">${website.description}</p>
                         <div class="card-action">
                             <button class="btn btn-secondary" onclick="event.stopPropagation(); openWhatsAppConsultation('${website.name}')">

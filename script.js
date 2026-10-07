@@ -107,11 +107,34 @@ const websites = [
 websites.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
 websites.forEach((w, i) => { w.id = i + 1; });
 
+function getWebsitePrice(category) {
+    const categoryPriceMap = {
+        Bisnis: 300000,
+        Pendidikan: 300000,
+        Blog: 300000,
+        Portofolio: 300000,
+        Creative: 400000,
+        'F&B': 400000,
+        Cafe: 400000,
+        Travel: 400000,
+        Kesehatan: 500000,
+        'E-commerce': 500000,
+        Fashion: 500000,
+        Otomotif: 500000,
+        Farm: 500000,
+        Fundraising: 500000,
+        'Konsultasi': 500000
+    };
+
+    return categoryPriceMap[category] ?? 400000;
+}
+
 // Tambahkan path gambar ke setiap website (gunakan capitalization yang sama seperti file di /assets/previews)
 websites.forEach((website) => {
     const capitalizedName = website.name.charAt(0).toUpperCase() + website.name.slice(1);
     website.image = `assets/previews/${capitalizedName}.png`;
     website.detailPage = `pages/website-${String(website.id).padStart(2, '0')}.html`;
+    website.price = getWebsitePrice(website.category);
 });
 
 // Utility functions
