@@ -154,11 +154,11 @@ function getTotalWebsites() {
 
 // WhatsApp functions
 function createConsultationMessage(websiteName) {
-    return `Halo, saya ingin berkonsultasi mengenai desain ${websiteName}. Saya tertarik dengan desain ini dan ingin mengetahui kemungkinan perubahan, penyesuaian fitur, serta estimasi biaya pengerjaannya.`;
+    return `Halo, saya tertarik membeli template ${websiteName}. Saya sudah yakin dengan desain ini dan ingin lanjut ke proses pemesanan. Tolong kirimkan detail harga final, fitur yang tersedia, serta cara pembayaran dan proses pengerjaannya.`;
 }
 
 function createGeneralConsultationMessage() {
-    return `Halo, saya ingin berkonsultasi mengenai layanan pembuatan website. Saya ingin mengetahui pilihan desain, fitur, penyesuaian, dan estimasi biaya.`;
+    return `Halo, saya tertarik dengan katalog website Lectore. Saya sudah siap untuk memesan dan ingin mengetahui template terbaik yang sesuai kebutuhan saya, beserta detail harga dan proses pembayarannya.`;
 }
 
 function generateWhatsAppLink(message) {
