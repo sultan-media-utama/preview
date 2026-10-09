@@ -103,7 +103,8 @@ const websites = [
     { id: 91, name: "Monza", category: "Bisnis", description: "Website klub olahraga" },
     { id: 92, name: "Nishio", category: "Blog", description: "Blog otomotif dan review mobil" },
     { id: 93, name: "Salerno", category: "Portofolio", description: "Portfolio ilustrasi digital" },
-    { id: 94, name: "Sassari", category: "Organisasi", description: "Organisasi pengembangan komunitas" }
+    { id: 94, name: "Sassari", category: "Organisasi", description: "Organisasi pengembangan komunitas" },
+    { id: 95, name: "FlowPilot", category: "SaaS & Startup", description: "Landing page SaaS untuk startup yang menjual otomatisasi dan analitik bisnis" }
 ];
 
 // Sort websites alphabetically by name (case-insensitive) and reassign sequential ids
@@ -136,7 +137,8 @@ function getWebsitePrice(category) {
         Farm: 500000,
         Fundraising: 500000,
         Organisasi: 500000,
-        'Konsultasi': 500000
+        'Konsultasi': 500000,
+        'SaaS & Startup': 550000
     };
 
     return categoryPriceMap[category] ?? 400000;
