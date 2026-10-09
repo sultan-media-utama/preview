@@ -184,8 +184,8 @@ function generateDetailPageHTML(website) {
             </a>
             <nav>
                 <a href="../index.html#katalog">Katalog</a>
-                <a href="#tentang">Tentang Kami</a>
-                <a href="#kontak">Kontak</a>
+                <a href="../about.html">Tentang Kami</a>
+                <a href="../contact.html">Kontak</a>
             </nav>
         </div>
     </header>
