@@ -152,7 +152,8 @@ function generateDetailPageHTML(website) {
     const formattedPrice = `Rp ${getWebsitePrice(website.category).toLocaleString('id-ID')}`;
 
     // Image path (relative from pages folder)
-    const imagePath = `../assets/previews/${website.name}.png`;
+    const imagePath = `../assets/previews-webp/${website.name}.webp`;
+    const fallbackImagePath = `../assets/previews/${website.name}.png`;
 
     let html = `<!DOCTYPE html>
 <html lang="id">
@@ -227,7 +228,7 @@ function generateDetailPageHTML(website) {
                 alt="Preview ${website.name}"
                 loading="lazy"
                 decoding="async"
-                onerror="this.style.background='#f0f0f0'; this.alt='Gambar tidak tersedia';"
+                onerror="this.onerror=null; this.src='${fallbackImagePath}';"
             >
         </div>
 

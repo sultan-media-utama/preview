@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400;500;700;900&display=swap');
-
 :root {
     --bg-base: #f9fafb;
     --bg-surface: #ffffff;
@@ -32,7 +30,7 @@
 }
 
 body {
-    font-family: 'Satoshi', -apple-system, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--bg-base);
     color: var(--text-primary);
     line-height: 1.5;
@@ -141,6 +139,13 @@ nav a:hover {
     box-shadow: 0 30px 60px -20px rgba(0,0,0,0.12);
     object-fit: cover;
     object-position: center;
+    background: #eef2ff;
+    aspect-ratio: 4 / 3;
+}
+
+.card {
+    content-visibility: auto;
+    contain-intrinsic-size: 320px 420px;
 }
 
 .hero h1 {

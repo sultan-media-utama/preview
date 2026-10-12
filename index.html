@@ -49,7 +49,7 @@
             </div>
         </div>
         <div class="hero-visual" aria-hidden="true">
-            <img src="assets/hero/hero-1.jpg" alt="Visual hero" id="heroImage">
+            <img src="assets/hero/hero-1.jpg" alt="Visual hero" id="heroImage" loading="eager" fetchpriority="high" decoding="async" width="560" height="420">
         </div>
     </section>
 
@@ -262,6 +262,36 @@
         }
 
         // Render websites as cards
+        function loadLazyImages() {
+            const images = document.querySelectorAll('[data-lazy-image]');
+            if (!('IntersectionObserver' in window)) {
+                images.forEach((img) => {
+                    img.src = img.dataset.lazyImage;
+                });
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries, currentObserver) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+
+                    const img = entry.target;
+                    const src = img.dataset.lazyImage;
+                    if (src) {
+                        img.src = src;
+                        img.removeAttribute('data-lazy-image');
+                    }
+
+                    currentObserver.unobserve(img);
+                });
+            }, {
+                rootMargin: '200px 0px',
+                threshold: 0.01
+            });
+
+            images.forEach((img) => observer.observe(img));
+        }
+
         function renderWebsites(websitesToRender) {
             const grid = document.getElementById('websiteGrid');
             const emptyState = document.getElementById('emptyState');
@@ -275,6 +305,7 @@
             grid.style.display = 'grid';
             emptyState.style.display = 'none';
             grid.innerHTML = websitesToRender.map(website => createWebsiteCard(website)).join('');
+            loadLazyImages();
 
             // Apply staggered entrance animations via delay
             const cards = grid.querySelectorAll('.card');
@@ -286,16 +317,18 @@
         // Create website card HTML
         function createWebsiteCard(website) {
             const numberFormatted = String(website.id).padStart(2, '0');
+            const placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='260' viewBox='0 0 400 260'%3E%3Crect width='100%25' height='100%25' fill='%23eef2ff'/%3E%3C/svg%3E";
             return `
                 <div class="card" onclick="goToDetail(${website.id})" role="button" tabindex="0" 
                      aria-label="Website ${website.name}, Kategori ${website.category}">
                     <div class="card-image">
                         <img 
-                            src="${website.image}" 
+                            src="${placeholder}"
+                            data-lazy-image="${website.image}"
                             alt="Preview ${website.name}"
                             loading="lazy"
                             decoding="async"
-                            onerror="this.style.background='#f4f4f5'; this.style.color='#a1a1aa'; this.alt='Gambar tidak tersedia';"
+                            onerror="this.onerror=null; this.src='${website.fallbackImage}';"
                         >
                     </div>
                     <div class="card-body">

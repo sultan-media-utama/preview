@@ -131,10 +131,21 @@ function getWebsitePrice(category) {
     return categoryPriceMap[category] ?? 400000;
 }
 
+function getOptimizedImagePath(name) {
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+    return `assets/previews-webp/${capitalizedName}.webp`;
+}
+
+function getFallbackImagePath(name) {
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+    return `assets/previews/${capitalizedName}.png`;
+}
+
 // Tambahkan path gambar ke setiap website (gunakan capitalization yang sama seperti file di /assets/previews)
 websites.forEach((website) => {
     const capitalizedName = website.name.charAt(0).toUpperCase() + website.name.slice(1);
-    website.image = `assets/previews/${capitalizedName}.png`;
+    website.image = getOptimizedImagePath(website.name);
+    website.fallbackImage = getFallbackImagePath(website.name);
     website.detailPage = `pages/website-${String(website.id).padStart(2, '0')}.html`;
     website.price = getWebsitePrice(website.category);
 });
