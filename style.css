@@ -580,6 +580,77 @@ footer {
     .card:nth-child(7n) .card-image {
         aspect-ratio: 16/10;
     }
+
+    /* Mobile navbar and button sizing fixes */
+    .header-container {
+        padding: 1rem 1rem;
+    }
+
+    nav {
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.35rem 0.5rem;
+    }
+
+    /* Reduce global button padding on smaller screens */
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Stack hero buttons and make them full width for easier tapping */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    /* Tweak brand mark to save horizontal space */
+    .brand-mark {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Fine-tune buttons on detail (single) pages for mobile consistency */
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 1.25rem 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+    }
+
+    .cta-buttons .btn,
+    .nav-adjacent .btn,
+    .navigation .btn {
+        padding: 0.55rem 0.75rem;
+        font-size: 0.9rem;
+        border-radius: 999px; /* keep pill shape consistent across pages */
+    }
+
+    /* Make secondary buttons slightly less tall than primary */
+    .btn-secondary {
+        padding: 0.45rem 0.7rem;
+    }
+
+    /* Reduce large margins that make buttons appear oversized */
+    .detail-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 /* ================= DETAIL PAGE ================= */
