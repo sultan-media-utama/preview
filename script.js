@@ -101,12 +101,13 @@ const websites = [
     { id: 92, name: "Nishio", category: "Bisnis", description: "Interior Design" },
     { id: 93, name: "Salerno", category: "Bisnis", description: "Pesan pijat secara online" },
     { id: 94, name: "Sassari", category: "F&B", description: "Makanan dan minuman" },
-    { id: 95, name: "FlowPilot", category: "SaaS & Startup", description: "Landing page SaaS untuk startup yang menjual otomatisasi dan analitik bisnis" }
+    { id: 95, name: "FlowPilot", category: "SaaS & Startup", description: "Landing page SaaS untuk startup yang menjual otomatisasi dan analitik bisnis" },
+    { id: 96, name: "Sapporo", category: "Kesehatan", description: "Jasa massage premium dengan desain spa yang tenang dan elegan" }
 ];
 
-// Sort websites alphabetically by name (case-insensitive) and reassign sequential ids
-websites.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-websites.forEach((w, i) => { w.id = i + 1; });
+websites.forEach((website, index) => {
+    website.id = index + 1;
+});
 
 function getWebsitePrice(category) {
     const categoryPriceMap = {

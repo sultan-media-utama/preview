@@ -104,12 +104,13 @@ const websites = [
     { id: 92, name: "Nishio", category: "Blog", description: "Blog otomotif dan review mobil" },
     { id: 93, name: "Salerno", category: "Portofolio", description: "Portfolio ilustrasi digital" },
     { id: 94, name: "Sassari", category: "Organisasi", description: "Organisasi pengembangan komunitas" },
-    { id: 95, name: "FlowPilot", category: "SaaS & Startup", description: "Landing page SaaS untuk startup yang menjual otomatisasi dan analitik bisnis" }
+    { id: 95, name: "FlowPilot", category: "SaaS & Startup", description: "Landing page SaaS untuk startup yang menjual otomatisasi dan analitik bisnis" },
+    { id: 96, name: "Sapporo", category: "Kesehatan", description: "Jasa massage premium dengan desain spa yang tenang dan elegan" }
 ];
 
-// Sort websites alphabetically by name (case-insensitive) and reassign sequential ids
-websites.sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-websites.forEach((w, i) => { w.id = i + 1; });
+websites.forEach((website, index) => {
+    website.id = index + 1;
+});
 
 // Utility function
 function getPreviousWebsite(currentId) {
