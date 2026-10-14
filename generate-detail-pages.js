@@ -105,7 +105,8 @@ const websites = [
     { id: 93, name: "Salerno", category: "Portofolio", description: "Portfolio ilustrasi digital" },
     { id: 94, name: "Sassari", category: "Organisasi", description: "Organisasi pengembangan komunitas" },
     { id: 95, name: "FlowPilot", category: "SaaS & Startup", description: "Landing page SaaS untuk startup yang menjual otomatisasi dan analitik bisnis" },
-    { id: 96, name: "Sapporo", category: "Kesehatan", description: "Jasa massage premium dengan desain spa yang tenang dan elegan" }
+    { id: 96, name: "Sapporo", category: "Kesehatan", description: "Jasa massage premium dengan desain spa yang tenang dan elegan" },
+    { id: 97, name: "Cirebon", category: "Bisnis", description: "Landing page properti premium dengan desain modern dan fokus pada penjualan aset hunian" }
 ];
 
 websites.forEach((website, index) => {

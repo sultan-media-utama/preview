@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sapporo — Lectore</title>
     <meta name="description" content="Lihat preview desain Sapporo dan konsultasikan kebutuhan penyesuaian website Anda.">
+    
+    <!-- Open Graph -->
     <meta property="og:title" content="Sapporo — Lectore">
     <meta property="og:description" content="Preview desain Sapporo dalam kategori Kesehatan. Konsultasikan kebutuhan Anda sekarang.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="../assets/previews-webp/Sapporo.webp">
     <meta name="theme-color" content="#0f172a">
+    
     <link rel="icon" type="image/png" href="../assets/logo-transparent.png">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="../index.html" class="logo-link" aria-label="Kembali ke halaman utama">
@@ -30,6 +34,7 @@
         </div>
     </header>
 
+    <!-- Breadcrumb -->
     <div class="breadcrumb">
         <a href="../index.html">Beranda</a>
         <span>/</span>
@@ -38,6 +43,7 @@
         <span>Sapporo</span>
     </div>
 
+    <!-- Detail Hero -->
     <section class="detail-hero">
         <div class="detail-header">
             <h1 class="detail-title">Sapporo</h1>
@@ -49,11 +55,16 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main>
+        <!-- Description -->
         <div class="detail-content">
-            <p class="detail-description">Jasa massage premium dengan desain spa yang tenang dan elegan.</p>
+            <p class="detail-description">
+                Jasa massage premium dengan desain spa yang tenang dan elegan
+            </p>
         </div>
 
+        <!-- Image -->
         <div class="detail-image">
             <img 
                 src="../assets/previews-webp/Sapporo.webp" 
@@ -64,6 +75,7 @@
             >
         </div>
 
+        <!-- CTA Section -->
         <div class="detail-content">
             <div class="cta-section">
                 <h3>Tertarik dengan Desain Ini?</h3>
@@ -77,17 +89,21 @@
             </div>
         </div>
 
+        <!-- Navigation -->
         <div class="detail-content">
             <div class="nav-adjacent">
                 <a href="website-95.html" class="btn btn-secondary">← Website Sebelumnya (FlowPilot)</a>
-                <button class="btn btn-secondary" disabled>Website Berikutnya →</button>
+                <a href="website-97.html" class="btn btn-secondary">Website Berikutnya (Cirebon) →</a>
             </div>
+
             <div class="navigation">
                 <a href="../index.html#katalog" class="btn btn-primary">Kembali ke Katalog</a>
             </div>
         </div>
     </main>
 
+    <!-- Footer -->
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-content">
@@ -102,7 +118,7 @@
                     <ul>
                         <li><a href="../index.html">Beranda</a></li>
                         <li><a href="../index.html#katalog">Katalog Koleksi</a></li>
-                        <li><a href="../about.html">Tentang Kami</a></li>
+                        <li><a href="../about.html">Tentang Agensi</a></li>
                         <li><a href="../contact.html">Hubungi Kami</a></li>
                     </ul>
                 </div>
@@ -123,9 +139,20 @@
 
     <script src="../script.js"></script>
     <script>
+        // Convenience function for this page
         function consultWebsite(websiteName) {
             openWhatsAppConsultation(websiteName);
         }
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' && true) {
+                window.location.href = 'website-95.html';
+            }
+            if (e.key === 'ArrowRight' && true) {
+                window.location.href = 'website-97.html';
+            }
+        });
     </script>
 </body>
 </html>
