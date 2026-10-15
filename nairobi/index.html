@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nairobi | Modern Everyday Shop</title>
+    <title>Nairobi | Everyday Essentials</title>
     <meta
       name="description"
-      content="Template ecommerce modern dengan koleksi produk, promo, dan halaman keranjang yang elegan."
+      content="Nairobi adalah template single page e-commerce yang sederhana, modern, dan siap dipakai untuk kebutuhan landing page produk sehari-hari."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +20,7 @@
     <div class="page-shell">
       <header class="site-header">
         <div class="container header-inner">
-          <a href="index.html" class="brand" aria-label="Nairobi home">
+          <a href="#top" class="brand" aria-label="Nairobi home">
             <span class="brand-mark">N</span>
             <span class="brand-text">Nairobi</span>
           </a>
@@ -28,34 +28,34 @@
           <nav class="main-nav" aria-label="Main navigation">
             <a href="#shop">Shop</a>
             <a href="#collections">Collections</a>
-            <a href="#new">New Arrivals</a>
+            <a href="#featured">Featured</a>
             <a href="#reviews">Reviews</a>
           </nav>
 
           <div class="header-actions">
             <button class="ghost-btn" type="button">Search</button>
-            <a href="cart.html" class="cart-link" aria-label="Lihat keranjang">
+            <a href="#shop" class="cart-link" aria-label="Lihat keranjang">
               Cart
-              <span class="cart-badge" id="cart-count">2</span>
+              <span class="cart-badge">2</span>
             </a>
           </div>
         </div>
       </header>
 
-      <main>
+      <main id="top">
         <section class="hero">
           <div class="container hero-grid">
             <div class="hero-copy">
               <p class="eyebrow">Fresh picks for everyday living</p>
               <h1>Style your life with smarter essentials.</h1>
               <p class="hero-text">
-                Discover home, beauty, and daily essentials designed to make every routine more beautiful,
+                Discover home, beauty, and daily essentials designed to make every routine feel more beautiful,
                 easier, and more enjoyable.
               </p>
 
               <div class="hero-actions">
                 <a href="#shop" class="btn btn-primary">Shop now</a>
-                <a href="cart.html" class="btn btn-secondary">View cart</a>
+                <a href="#collections" class="btn btn-secondary">View collection</a>
               </div>
 
               <div class="hero-stats">
@@ -74,10 +74,10 @@
               </div>
             </div>
 
-            <div class="hero-visual" aria-label="Produk unggulan">
-              <div class="promo-card main-product">
-                <div class="product-image product-one"></div>
-                <div class="product-meta">
+            <div class="hero-visual" aria-label="Featured product">
+              <div class="showcase-card">
+                <div class="showcase-image"></div>
+                <div class="showcase-info">
                   <span class="tag">Bestseller</span>
                   <h3>Harbor Lamp</h3>
                   <div class="price-row">
@@ -87,12 +87,12 @@
                 </div>
               </div>
 
-              <div class="floating-card card-small">
+              <div class="floating-note floating-note-top">
                 <span>Free shipping</span>
                 <strong>On order over Rp 500K</strong>
               </div>
 
-              <div class="floating-card card-mini">
+              <div class="floating-note floating-note-bottom">
                 <span>Trending</span>
                 <strong>+36% this week</strong>
               </div>
@@ -150,7 +150,7 @@
                 <p class="eyebrow eyebrow-soft">Featured products</p>
                 <h2>Best sellers this week</h2>
               </div>
-              <a href="cart.html" class="link-arrow">Go to cart</a>
+              <a href="#featured" class="link-arrow">See pricing</a>
             </div>
 
             <div class="product-grid">
@@ -227,30 +227,106 @@
           </div>
         </section>
 
-        <section id="new" class="section">
-          <div class="container editorial-grid">
-            <div class="editorial-card large-card">
-              <div class="editorial-copy">
-                <p class="eyebrow eyebrow-soft">New arrival</p>
-                <h3>Thoughtful pieces for slower mornings.</h3>
-                <p>
-                  Curated objects that turn small routines into moments of comfort, clarity, and joy.
-                </p>
-                <a href="#shop" class="btn btn-secondary">Explore new</a>
+        <section class="section story-section">
+          <div class="container story-grid">
+            <div class="story-copy">
+              <p class="eyebrow eyebrow-soft">Why Nairobi</p>
+              <h2>Thoughtful essentials for easier routines.</h2>
+              <ul class="check-list">
+                <li>Curated essentials for daily comfort and usefulness</li>
+                <li>Premium quality with a warm, elevated look</li>
+                <li>Reliable delivery and easy shopping experience</li>
+                <li>Design details that make everyday moments feel better</li>
+              </ul>
+            </div>
+
+            <div class="info-panel">
+              <div class="panel-header">
+                <span class="dot"></span>
+                <span class="dot dot-soft"></span>
+                <span class="dot dot-soft"></span>
+              </div>
+
+              <div class="panel-body">
+                <div class="summary-row">
+                  <div>
+                    <span class="small-label">Session</span>
+                    <strong>30 min</strong>
+                  </div>
+                  <div>
+                    <span class="small-label">Best seller</span>
+                    <strong>Home set</strong>
+                  </div>
+                </div>
+
+                <div class="progress-card">
+                  <div class="progress-head">
+                    <span>Customer satisfaction</span>
+                    <strong>96%</strong>
+                  </div>
+                  <div class="progress-bar"><span></span></div>
+                </div>
+
+                <div class="mini-stats">
+                  <div>
+                    <strong>30+</strong>
+                    <span>Best picks</span>
+                  </div>
+                  <div>
+                    <strong>Open</strong>
+                    <span>Daily 9 AM - 10 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="featured" class="section pricing-section">
+          <div class="container">
+            <div class="section-heading center-heading">
+              <div>
+                <p class="eyebrow eyebrow-soft">Bundles</p>
+                <h2>Simple picks for everyday living.</h2>
               </div>
             </div>
 
-            <div class="editorial-stack">
-              <div class="editorial-card mini-card">
-                <span>Bundles</span>
-                <h4>Wellness starter kit</h4>
-                <strong>Rp 560.000</strong>
-              </div>
-              <div class="editorial-card mini-card accent-card">
-                <span>Limited</span>
-                <h4>Autumn scent collection</h4>
-                <strong>Rp 320.000</strong>
-              </div>
+            <div class="pricing-grid">
+              <article class="price-card">
+                <span class="plan-label">Starter</span>
+                <h3>Rp 149K</h3>
+                <p>Perfect for daily essentials with a simple, practical feel.</p>
+                <ul>
+                  <li>2 home essentials</li>
+                  <li>Free packaging</li>
+                  <li>Fast shipping</li>
+                </ul>
+                <a href="#shop" class="btn btn-secondary full">Choose bundle</a>
+              </article>
+
+              <article class="price-card featured">
+                <span class="plan-label">Most popular</span>
+                <h3>Rp 249K</h3>
+                <p>Balanced picks for home styling, care, and lifestyle essentials.</p>
+                <ul>
+                  <li>4 curated items</li>
+                  <li>Premium finish</li>
+                  <li>Exclusive discount</li>
+                </ul>
+                <a href="#shop" class="btn btn-primary full">Shop now</a>
+              </article>
+
+              <article class="price-card">
+                <span class="plan-label">Premium</span>
+                <h3>Rp 399K</h3>
+                <p>For elevated home and beauty essentials that feel special.</p>
+                <ul>
+                  <li>6 premium items</li>
+                  <li>Gift-ready packaging</li>
+                  <li>Priority delivery</li>
+                </ul>
+                <a href="#shop" class="btn btn-secondary full">Choose bundle</a>
+              </article>
             </div>
           </div>
         </section>
@@ -268,7 +344,7 @@
               <article class="review-card">
                 <div class="stars">★★★★★</div>
                 <p>
-                  “Product quality feels premium and the packaging is genuinely beautiful. It looks like an elevated brand.”
+                  “The product quality feels premium and the details are genuinely beautiful. It makes my space feel more complete.”
                 </p>
                 <div class="reviewer">
                   <strong>Alya M.</strong>
@@ -279,7 +355,7 @@
               <article class="review-card">
                 <div class="stars">★★★★★</div>
                 <p>
-                  “The bundle was beautifully put together and arrived faster than expected. Will definitely order again.”
+                  “The bundle arrived quickly and it feels thoughtful in every detail. I will definitely order again.”
                 </p>
                 <div class="reviewer">
                   <strong>Rian K.</strong>
@@ -290,7 +366,7 @@
               <article class="review-card">
                 <div class="stars">★★★★★</div>
                 <p>
-                  “I am obsessed with the color and the details. Everything from Nairobi feels considered and warm.”
+                  “Everything from Nairobi feels considered and warm. It fits beautifully with my everyday setup.”
                 </p>
                 <div class="reviewer">
                   <strong>Sinta P.</strong>
@@ -300,12 +376,22 @@
             </div>
           </div>
         </section>
+
+        <section class="section cta-section">
+          <div class="container cta-banner">
+            <div>
+              <p class="eyebrow eyebrow-soft">New season</p>
+              <h2>Bring a softer, smarter everyday to your space.</h2>
+            </div>
+            <a href="#shop" class="btn btn-primary">Shop collection</a>
+          </div>
+        </section>
       </main>
 
       <footer class="site-footer">
         <div class="container footer-grid">
           <div>
-            <a href="index.html" class="brand">
+            <a href="#top" class="brand">
               <span class="brand-mark">N</span>
               <span class="brand-text">Nairobi</span>
             </a>
@@ -317,16 +403,16 @@
             <ul>
               <li><a href="#shop">New arrivals</a></li>
               <li><a href="#collections">Collections</a></li>
-              <li><a href="cart.html">Cart</a></li>
+              <li><a href="#featured">Featured</a></li>
             </ul>
           </div>
 
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Journal</a></li>
-              <li><a href="#">Support</a></li>
+              <li><a href="#top">About us</a></li>
+              <li><a href="#reviews">Reviews</a></li>
+              <li><a href="#shop">Support</a></li>
             </ul>
           </div>
 
