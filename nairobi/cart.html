@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keranjang Belanja | Nairobi</title>
+    <meta
+      name="description"
+      content="Halaman keranjang belanja untuk template ecommerce modern dengan ringkasan pesanan."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell cart-page">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a href="index.html" class="brand" aria-label="Nairobi home">
+            <span class="brand-mark">N</span>
+            <span class="brand-text">Nairobi</span>
+          </a>
+
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html#shop">Shop</a>
+            <a href="index.html#collections">Collections</a>
+            <a href="index.html#new">New Arrivals</a>
+            <a href="index.html#reviews">Reviews</a>
+          </nav>
+
+          <div class="header-actions">
+            <a href="index.html" class="ghost-btn">Continue shopping</a>
+            <a href="cart.html" class="cart-link" aria-label="Lihat keranjang">
+              Cart
+              <span class="cart-badge" id="cart-count">2</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="cart-main">
+        <div class="container">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Shopping cart</span>
+          </div>
+
+          <div class="cart-layout">
+            <section class="cart-items-panel">
+              <div class="cart-panel-head">
+                <h1>Keranjang Belanja</h1>
+                <span id="item-total">2 item</span>
+              </div>
+
+              <div class="cart-item-row" data-price="349000" data-name="Oakwood Table Lamp">
+                <div class="cart-product-visual thumb-one small-thumb"></div>
+                <div class="cart-product-info">
+                  <h3>Oakwood Table Lamp</h3>
+                  <p>Warm white · Natural oak</p>
+                  <div class="cart-meta">
+                    <span>Stock ready</span>
+                    <span>Free return</span>
+                  </div>
+                </div>
+                <div class="quantity-control" aria-label="Ubah kuantitas Oakwood Table Lamp">
+                  <button type="button" class="qty-btn minus" aria-label="Kurangi kuantitas">−</button>
+                  <span class="qty-value">1</span>
+                  <button type="button" class="qty-btn plus" aria-label="Tambah kuantitas">+</button>
+                </div>
+                <div class="item-price-wrap">
+                  <strong class="item-price">Rp 349.000</strong>
+                </div>
+              </div>
+
+              <div class="cart-item-row" data-price="189000" data-name="Velvet Cleanser">
+                <div class="cart-product-visual thumb-two small-thumb"></div>
+                <div class="cart-product-info">
+                  <h3>Velvet Cleanser</h3>
+                  <p>Glow formula · 120 ml</p>
+                  <div class="cart-meta">
+                    <span>Best seller</span>
+                    <span>Eco refill</span>
+                  </div>
+                </div>
+                <div class="quantity-control" aria-label="Ubah kuantitas Velvet Cleanser">
+                  <button type="button" class="qty-btn minus" aria-label="Kurangi kuantitas">−</button>
+                  <span class="qty-value">1</span>
+                  <button type="button" class="qty-btn plus" aria-label="Tambah kuantitas">+</button>
+                </div>
+                <div class="item-price-wrap">
+                  <strong class="item-price">Rp 189.000</strong>
+                </div>
+              </div>
+            </section>
+
+            <aside class="summary-panel">
+              <h2>Ringkasan Pesanan</h2>
+
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">Rp 538.000</strong>
+              </div>
+
+              <div class="summary-row">
+                <span>Shipping</span>
+                <strong id="shipping">Rp 25.000</strong>
+              </div>
+
+              <div class="summary-row">
+                <span>Discount</span>
+                <strong id="discount">-Rp 25.000</strong>
+              </div>
+
+              <div class="promo-box">
+                <label for="coupon">Kode promo</label>
+                <div class="promo-input-wrap">
+                  <input id="coupon" type="text" value="LUMA10" aria-label="Masukkan kode promo" />
+                  <button type="button">Apply</button>
+                </div>
+              </div>
+
+              <div class="summary-total">
+                <span>Total</span>
+                <strong id="total">Rp 538.000</strong>
+              </div>
+
+              <button type="button" class="btn btn-primary checkout-btn">Checkout</button>
+              <a href="index.html" class="text-link">Lanjutkan belanja</a>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
