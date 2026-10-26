@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sultan-media-utama.github.io/preview/sitemap.xml

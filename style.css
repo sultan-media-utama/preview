@@ -165,6 +165,68 @@ nav a:hover {
     line-height: 1.7;
 }
 
+.seo-section {
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.seo-intro {
+    max-width: 760px;
+    margin-bottom: 2rem;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.seo-intro h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+    margin-bottom: 1rem;
+}
+
+.seo-intro p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.seo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.seo-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-diffusion);
+}
+
+.seo-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.03em;
+}
+
+.seo-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 .hero-stats {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -553,6 +615,10 @@ footer {
     }
     .hero h1 {
         font-size: 3rem;
+    }
+
+    .seo-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-visual {

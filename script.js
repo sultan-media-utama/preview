@@ -167,11 +167,11 @@ function getTotalWebsites() {
 
 // WhatsApp functions
 function createConsultationMessage(websiteName) {
-    return `Halo, saya tertarik membeli template ${websiteName}. Saya sudah yakin dengan desain ini dan ingin lanjut ke proses pemesanan. Tolong kirimkan detail harga final, fitur yang tersedia, serta cara pembayaran dan proses pengerjaannya.`;
+    return `Halo, saya tertarik membeli website murah untuk ${websiteName}. Saya sudah yakin dengan desain ini dan ingin lanjut ke proses pemesanan. Tolong kirimkan detail harga final, fitur yang tersedia, serta cara pembayaran dan proses pengerjaannya.`;
 }
 
 function createGeneralConsultationMessage() {
-    return `Halo, saya tertarik dengan katalog website Lectore. Saya sudah siap untuk memesan dan ingin mengetahui template terbaik yang sesuai kebutuhan saya, beserta detail harga dan proses pembayarannya.`;
+    return `Halo, saya ingin jasa pembuatan website murah untuk bisnis saya. Saya ingin tahu paket website murah terbaik, detail harga, fitur yang tersedia, dan estimasi waktu pengerjaannya.`;
 }
 
 function generateWhatsAppLink(message) {
